@@ -1,0 +1,46 @@
+def menu():
+    print("\n=== PROGRAM NILAI UJIAN SISWA ===")
+    print("1. Tampilkan address array nilai")
+    print("2. Tampilkan address dari semua index array")
+    print("3. Masukkan nilai ujian ke semua mata pelajaran")
+    print("4. Keluar")
+
+def main():
+    nilai = [0] * 5
+    mata_pelajaran = ["Matematika", "Bahasa Indonesia", "IPA", "IPS", "Bahasa Inggris"]
+    running = True
+    while running:
+        menu()
+        try:
+            choice = int(input("Pilihan: "))
+        except ValueError:
+            print("Masukkan angka yang valid!")
+            continue
+        if choice == 1:
+            print(f"Address array nilai: {id(nilai)}")
+        elif choice == 2:
+            for i in range(5):
+                print(f"Address nilai[{i}] ({mata_pelajaran[i]}): {id(nilai[i])}")
+        elif choice == 3:
+            print("Masukkan nilai ujian (0-100):")
+            for i in range(5):
+                while True:
+                    try:
+                        nilai[i] = int(input(f"Nilai {mata_pelajaran[i]}: "))
+                        if 0 <= nilai[i] <= 100:
+                            break
+                        else:
+                            print("Nilai harus antara 0 dan 100!")
+                    except ValueError:
+                        print("Input tidak valid, silakan masukkan angka!")
+            print(f"\nNilai ujian: {nilai}")
+            print(f"Rata-rata: {sum(nilai)/len(nilai):.1f}")
+        elif choice == 4:
+            running = False
+            print("Program selesai.")
+        else:
+            print("Pilihan tidak valid!")
+
+
+if __name__ == "__main__":
+    main()
