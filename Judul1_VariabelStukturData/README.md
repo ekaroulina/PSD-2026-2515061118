@@ -1,6 +1,7 @@
 # Program Nilai Ujian Mahasiswa
 # Penjelasan Singkat
 Program ini adalah implementasi list 1D dalam manajemen nilai ujian siswa yang memungkinkan pengguna menyimpan dan mengelola nilai ujian untuk 5 mata pelajaran yaitu Matematika, Bahasa Indonesia, IPA, IPS, dan Bahasa Inggris. Pengguna dapat memasukkan nilai (0–100) untuk setiap mata pelajaran dan program otomatis menghitung rata-ratanya, serta dilengkapi fitur untuk melihat alamat memori (address) dari array nilai baik secara keseluruhan maupun per index yang berguna untuk memahami cara Python menyimpan data di memori komputer. Dalam implementasinya, program menerapkan struktur data List sebagai inti penyimpanan, dengan algoritma Sequential Traversal menggunakan `for i in range(5)` untuk menelusuri tiap elemen, serta Input Validation Algorithm melalui kombinasi `try/except` dan `while True` yang memastikan setiap data yang dimasukkan selalu valid sebelum disimpan ke dalam array.
+
 # Source Code
 <img width="702" height="612" alt="Cuplikan layar 2026-04-28 183620" src="https://github.com/user-attachments/assets/77f31ba5-ed0b-43c6-b4fa-1c16a8766892" />
 <img width="734" height="306" alt="Cuplikan layar 2026-04-28 183642" src="https://github.com/user-attachments/assets/8bc3c614-1fbb-4c49-90ef-3984c8a5435b" />
@@ -47,6 +48,7 @@ Baris 40 : Kondisi else jika user mengetik angka selain 1, 2, 3, atau 4
 Baris 41 : Menampilkan pesan "Pilihan tidak valid!"
 Baris 42 : Mengecek apakah file dijalankan langsung bukan sebagai modul import
 Baris 43 : Memanggil fungsi main() untuk menjalankan program
+
 # Output
 <img width="470" height="347" alt="Cuplikan layar 2026-04-28 195408" src="https://github.com/user-attachments/assets/7698be99-e683-4640-a17f-96f647009a67" />
 <img width="477" height="414" alt="Cuplikan layar 2026-04-28 195419" src="https://github.com/user-attachments/assets/b1caa331-f2c1-4608-ae60-1cc5d28d202c" />
