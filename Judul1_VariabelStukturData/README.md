@@ -52,5 +52,28 @@ Baris 43 : Memanggil fungsi main() untuk menjalankan program
 # Output
 <img width="470" height="347" alt="Cuplikan layar 2026-04-28 195408" src="https://github.com/user-attachments/assets/7698be99-e683-4640-a17f-96f647009a67" />
 <img width="477" height="414" alt="Cuplikan layar 2026-04-28 195419" src="https://github.com/user-attachments/assets/b1caa331-f2c1-4608-ae60-1cc5d28d202c" />
+Pilihan 1 : User memilih menu 1
+maka program menampilkan address memori keseluruhan list nilai
+Output : Address array nilai: 1672880693824
 
+Pilihan 2 : User memilih menu 2
+maka Program menampilkan address memori tiap index
+Output : Address nilai[0] (Matematika)      : 140727786668936
+         Address nilai[1] (Bahasa Indonesia) : 140727786668936
+         Address nilai[2] (IPA)              : 140727786668936
+         Address nilai[3] (IPS)              : 140727786668936
+         Address nilai[4] (Bahasa Inggris)   : 140727786668936                   
+
+Pilihan 3 : User memilih opsi 3
+disini Program meminta input nilai satu per satu
+Input   : Matematika=4, B.Indonesia=50,
+          IPA=60, IPS=90, B.Inggris=100
+Output  : Nilai ujian : [4, 50, 60, 90, 100]
+          Rata-rata   : 60.8                
+
+Pilihan 4 :User memilih opsi 4
+Variabel running berubah menjadi False
+Perulangan while berhenti
+Output  : Program selesai.
+                      
 
