@@ -1,4 +1,6 @@
 # Program Mengurutkan NPM
+Program ini merupakan implementasi algoritma **Insertion Sort**. Program memungkinkan pengguna memasukkan sejumlah NPM, kemudian setiap NPM akan divalidasi agar hanya menerima input berupa angka dan harus terdiri dari tepat **10 digit**. Setelah seluruh data berhasil disimpan ke dalam list, program akan melakukan proses pengurutan NPM berdasarkan **3 digit terakhir** dari setiap NPM, bukan berdasarkan keseluruhan angka, sehingga urutan yang dihasilkan sesuai dengan kebutuhan identifikasi nomor urut mahasiswa dari kode belakang NPM. Dalam implementasinya, program menerapkan struktur data **List** sebagai media penyimpanan utama, menggunakan algoritma **Insertion Sort** sebagai metode pengurutan dengan teknik penyisipan elemen pada posisi yang sesuai, serta memanfaatkan operasi **modulus (%1000)** untuk mengambil tiga angka terakhir sebagai acuan pembanding. Selain itu, program juga dilengkapi dengan **Input Validation Algorithm** melalui kombinasi `try/except`, `while True`, dan pengecekan rentang nilai 10 digit agar data yang masuk dipastikan valid sebelum diproses ke tahap sorting.
+
 
 
 # Source Code
