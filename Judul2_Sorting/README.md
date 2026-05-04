@@ -45,4 +45,4 @@ Baris 35 : Memanggil fungsi main agar seluruh program dieksekusi.
 Berdasarkan output program di atas, pengguna memasukkan jumlah NPM sebanyak 4 data, kemudian menginput 4 NPM mahasiswa yaitu 2515061118, 2515061109, 2515061120, dan 2515061100. Seluruh data diterima karena valid dan terdiri dari 10 digit, lalu disimpan ke dalam list arr. Program menampilkan data awal pada bagian “NPM sebelum diurutkan” yang masih sesuai urutan input. Selanjutnya fungsi insertion_sort dijalankan untuk mengurutkan data menggunakan algoritma Insertion Sort dengan acuan 3 digit terakhir NPM melalui operasi %1000. Dari data tersebut diperoleh angka belakang 118, 109, 120, dan 100, sehingga setelah diurutkan dari yang terkecil ke terbesar hasilnya menjadi 2515061100, 2515061109, 2515061118, dan 2515061120. Output “NPM setelah diurutkan (Insertion Sort)” menunjukkan bahwa program berhasil mengurutkan NPM berdasarkan 3 angka terakhir.
 
 # Link Youtube
-
+https://youtu.be/HKiAjan2irU?si=5ZHQAXEEQuxGCkuH
