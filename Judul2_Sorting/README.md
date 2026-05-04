@@ -1,8 +1,6 @@
 # Program Mengurutkan NPM
 Program ini merupakan implementasi algoritma **Insertion Sort**. Program memungkinkan pengguna memasukkan sejumlah NPM, kemudian setiap NPM akan divalidasi agar hanya menerima input berupa angka dan harus terdiri dari tepat **10 digit**. Setelah seluruh data berhasil disimpan ke dalam list, program akan melakukan proses pengurutan NPM berdasarkan **3 digit terakhir** dari setiap NPM, bukan berdasarkan keseluruhan angka, sehingga urutan yang dihasilkan sesuai dengan kebutuhan identifikasi nomor urut mahasiswa dari kode belakang NPM. Dalam implementasinya, program menerapkan struktur data **List** sebagai media penyimpanan utama, menggunakan algoritma **Insertion Sort** sebagai metode pengurutan dengan teknik penyisipan elemen pada posisi yang sesuai, serta memanfaatkan operasi **modulus (%1000)** untuk mengambil tiga angka terakhir sebagai acuan pembanding. Selain itu, program juga dilengkapi dengan **Input Validation Algorithm** melalui kombinasi `try/except`, `while True`, dan pengecekan rentang nilai 10 digit agar data yang masuk dipastikan valid sebelum diproses ke tahap sorting.
 
-
-
 # Source Code
 <img width="787" height="509" alt="Cuplikan layar 2026-05-04 174400" src="https://github.com/user-attachments/assets/c9c11325-8fa5-4689-a5b6-ec10bb53c2d3" />
 <img width="749" height="268" alt="Cuplikan layar 2026-05-04 175140" src="https://github.com/user-attachments/assets/7f82c34a-43d3-4a8f-8f7d-aae82aa87658" />
@@ -42,5 +40,9 @@ Baris 33 : Memberikan baris kosong setelah output selesai ditampilkan.
 Baris 34 : Mengecek apakah file Python dijalankan langsung.
 Baris 35 : Memanggil fungsi main agar seluruh program dieksekusi.
 
-#Output
+# Output
 <img width="861" height="213" alt="Cuplikan layar 2026-05-04 174330" src="https://github.com/user-attachments/assets/f6ede017-5aec-4c26-b43b-7e546aa8fda6" />
+Berdasarkan output program di atas, pengguna memasukkan jumlah NPM sebanyak 4 data, kemudian menginput 4 NPM mahasiswa yaitu 2515061118, 2515061109, 2515061120, dan 2515061100. Seluruh data diterima karena valid dan terdiri dari 10 digit, lalu disimpan ke dalam list arr. Program menampilkan data awal pada bagian “NPM sebelum diurutkan” yang masih sesuai urutan input. Selanjutnya fungsi insertion_sort dijalankan untuk mengurutkan data menggunakan algoritma Insertion Sort dengan acuan 3 digit terakhir NPM melalui operasi %1000. Dari data tersebut diperoleh angka belakang 118, 109, 120, dan 100, sehingga setelah diurutkan dari yang terkecil ke terbesar hasilnya menjadi 2515061100, 2515061109, 2515061118, dan 2515061120. Output “NPM setelah diurutkan (Insertion Sort)” menunjukkan bahwa program berhasil mengurutkan NPM berdasarkan 3 angka terakhir.
+
+# Link Youtube
+
