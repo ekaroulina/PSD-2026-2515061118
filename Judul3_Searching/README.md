@@ -1,5 +1,8 @@
 # Program Mencari Lagu dalam Playlist Lagu Menggunakan Binary Search
 ## Deskripsi
+Program ini adalah implementasi algoritma **Binary Search** dalam pencarian judul lagu dari playlist berisi 11 lagu. Pengguna memasukkan judul lagu yang ingin dicari, lalu program menemukannya dengan cara membagi area pencarian menjadi dua bagian secara berulang hingga lagu ditemukan atau dipastikan tidak ada.
+Program menerapkan struktur data List sebagai penyimpanan playlist yang diurutkan alfabetis menggunakan .sort() karena Binary Search hanya bekerja pada data terurut. Program juga dibuat dengan Input Validation menggunakan while True untuk memastikan pengguna selalu memasukkan input yang valid sebelum pencarian dimulai.
+
 ## Source Code
 <img width="737" height="360" alt="Cuplikan layar 2026-05-11 114547" src="https://github.com/user-attachments/assets/38897f0f-01e1-45ce-9e61-4ae0d61c10ae" />
 <img width="771" height="403" alt="Cuplikan layar 2026-05-11 115404" src="https://github.com/user-attachments/assets/2b4d3024-ed21-4ffb-b2bd-518bc02fb24d" />
