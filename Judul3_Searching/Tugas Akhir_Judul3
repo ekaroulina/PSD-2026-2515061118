@@ -1,0 +1,58 @@
+def binary_search(arr, n, target):
+    l = 0
+    r = n - 1
+    pos = -1
+    while l <= r:
+        m = l + (r - l) // 2
+        print(f"Median: {m}, judul: {arr[m]}")
+        if arr[m] == target:
+            pos = m
+            break
+        elif arr[m] < target:
+            print("Mencari di kanan (alfabet lebih akhir)")
+            l = m + 1
+        else:
+            print("Mencari di kiri (alfabet lebih awal)")
+            r = m - 1
+    return pos
+
+
+def main():
+    playlist = [
+        "Allah Peduli",
+        "Birds Of A Feather",
+        "Chasing Pavements",
+        "Datanglah dan Bertahta",
+        "Freak",
+        "God Will Take Care of You",
+        "Hari Terbaik",
+        "Kau 1, 2, 3",
+        "Mardua Holong",
+        "Since Jesus Came Into My Heart",
+        "When the Roll is Called Up Yonder"
+        ]
+
+    playlist.sort()
+    n = len(playlist)
+    print("PLAYLIST LAGU EKAA🐱")
+    for i, judul in enumerate(playlist):
+        print(f"  [{i}] {judul}")
+    print()
+
+    while True:
+        target = input("Masukkan judul lagu yang ingin dicari: ").strip()
+        if target:
+            break
+        print("Input tidak boleh kosong!")
+
+    print()
+    pos = binary_search(playlist, n, target)
+
+    if pos != -1:
+        print(f"\nLagu \"{target}\" ditemukan di indeks ke-{pos}!")
+    else:
+        print(f"\nLagu \"{target}\" tidak ditemukan dalam playlist.")
+
+
+if __name__ == "__main__":
+    main()
