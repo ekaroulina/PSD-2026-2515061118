@@ -75,6 +75,10 @@ Program menerapkan struktur data List sebagai penyimpanan playlist yang diurutka
 Berdasarkan output program di atas, pengguna memasukkan judul lagu yang ingin dicari yaitu "Mardua Holong". Program terlebih dahulu menampilkan seluruh isi playlist yang telah diurutkan secara alfabetis mulai dari indeks 0 hingga 10, mulai dari "Allah Peduli" sampai "When the Roll is Called Up Yonder".
 Setelah input diterima, fungsi binary_search dijalankan. Pencarian dimulai dengan mengecek elemen tengah di indeks 5 yaitu "God Will Take Care of You", karena judul tersebut secara alfabet lebih awal dari "Mardua Holong" maka program membuang separuh kiri dan melanjutkan pencarian ke sisi kanan. Iterasi kedua mengecek elemen tengah baru di indeks 8 yaitu "Mardua Holong", dan judul tersebut cocok dengan target sehingga pencarian langsung berhenti. Program hanya membutuhkan 2 iterasi untuk menemukan lagu dari 11 data yang tersedia, yang membuktikan efisiensi algoritma Binary Search dibanding Sequential Search yang bisa membutuhkan hingga 9 pengecekan untuk data yang sama. Hasil akhir menampilkan bahwa lagu "Mardua Holong" berhasil ditemukan di indeks ke-8.
 ## Link Youtube
+https://youtu.be/Mmb7XnKbzX4?si=ieQOgxv2bv8IuIyR
+
+## Tugas Tambahan
+<img width="1216" height="1280" alt="WhatsApp Image 2026-05-11 at 21 35 23" src="https://github.com/user-attachments/assets/6ad97183-7bd7-4e8f-b769-1e92c0646312" />
 
 
 
