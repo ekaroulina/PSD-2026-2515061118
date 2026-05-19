@@ -6,7 +6,7 @@ Program ini adalah implementasi **Queue Array** untuk simulasi sistem antrean pe
 <img width="1057" height="597" alt="Cuplikan layar 2026-05-19 170920" src="https://github.com/user-attachments/assets/45b389fb-9f8b-4b6a-919a-482f37ebb363" />
 <img width="1049" height="604" alt="Cuplikan layar 2026-05-19 171002" src="https://github.com/user-attachments/assets/5f9c7351-acd0-4579-a666-dd1945982fe8" />
 
-## Penjelasan Kode QueueBioskop
+### Penjelasan 
 
 **Baris 1** : Mendefinisikan class QueueBioskop sebagai representasi sistem antrean bioskop
 
@@ -142,6 +142,22 @@ Program ini adalah implementasi **Queue Array** untuk simulasi sistem antrean pe
 <img width="776" height="390" alt="Cuplikan layar 2026-05-19 171757" src="https://github.com/user-attachments/assets/20f7c875-1846-4562-9914-cf472cca4ccf" />
 <img width="675" height="504" alt="Cuplikan layar 2026-05-19 171818" src="https://github.com/user-attachments/assets/f8634272-ebdf-4b0e-8cc4-878c8297980c" />
 <img width="689" height="528" alt="Cuplikan layar 2026-05-19 171833" src="https://github.com/user-attachments/assets/87f85e96-89ea-4eb5-9243-d4c37c5602a0" />
+
+Berdasarkan output program di atas, pengujian dilakukan dengan beberapa skenario untuk memastikan seluruh fitur berjalan dengan benar.
+
+Pengujian pertama dilakukan dengan memilih menu 1 untuk menambah pelanggan. Pengguna memasukkan nama "eka" dan kode pelanggan "234", sehingga program membentuk tiket_id menjadi "EK34" dengan mengambil 2 huruf pertama nama (huruf kapital) dan 2 digit terakhir kode pelanggan. Program kemudian mencetak pesan "Pelanggan EK34 masuk antrean" yang menandakan proses enqueue berhasil dijalankan.
+
+Pengujian kedua kembali memilih menu 1 dengan nama "gita" dan kode pelanggan "902", sehingga tiket_id yang terbentuk adalah "GI02". Karena tiket_id tersebut mengandung angka "2", program mengenali pelanggan ini sebagai VIP dan langsung mencetak pesan "Pelanggan GI02 langsung mendapat kursi tanpa antre!" tanpa memasukkannya ke dalam antrean.
+
+Pengujian ketiga memilih menu 2 untuk melayani pelanggan. Program memanggil method dequeue dan mengeluarkan pelanggan pertama dari antrean yaitu "EK34", lalu mencetak pesan "Pelanggan EK34 dipanggil untuk membeli tiket". Hal ini membuktikan bahwa antrean bekerja sesuai prinsip FIFO (First In First Out), di mana pelanggan yang masuk lebih awal dilayani lebih dahulu.
+
+Pengujian keempat memilih menu 3 untuk melihat pelanggan pertama. Karena pelanggan EK34 sudah dilayani dan tidak ada pelanggan reguler lain dalam antrean, program mencetak "Pelanggan pertama: Kosong". Begitu pula saat menu 4 dipilih untuk melihat pelanggan terakhir, program mencetak "Pelanggan terakhir: Kosong" karena antrean memang dalam keadaan kosong.
+
+Pengujian kelima memilih menu 5 untuk mengecek status antrean. Program memanggil method is_empty dan mengembalikan nilai True, yang ditampilkan sebagai "Antrean kosong? True", membuktikan bahwa antrean benar-benar kosong setelah pelanggan EK34 dilayani.
+
+Pengujian keenam memilih menu 6 untuk melihat jumlah pelanggan. Program memanggil method display dan mencetak "Total pelanggan di bioskop: 1/10 (VIP tidak dihitung antrean)" diikuti "Antrean kosong." Angka 1 pada total pelanggan berasal dari pelanggan VIP GI02 yang tetap dihitung dalam self.total_pelanggan meskipun tidak masuk ke dalam antrean.
+
+Terakhir, pengguna memilih menu 7 untuk keluar dari program, sehingga program mencetak "Keluar dari program" dan perulangan while dihentikan dengan perintah break.
 
 ## Link Youtube
 
