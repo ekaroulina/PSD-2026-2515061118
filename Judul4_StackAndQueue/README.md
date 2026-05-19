@@ -1,5 +1,6 @@
-# Program Antrean Pemesanan Tiket Bioskop
+# Program Antrean Pemesanan Tiket Bioskop dengan Stack Array
 ## Deskripsi Singkat
+Program ini adalah implementasi **Queue (Antrian)** untuk simulasi sistem antrean pelanggan bioskop. Pengguna dapat menambah pelanggan ke antrean, memanggil pelanggan untuk dilayani, serta melihat status antrean secara real-time. Program menerapkan logika VIP pelanggan yang Kode-nya mengandung angka 2 pada dua digit terakhir langsung mendapat kursi tanpa masuk antrean. Program menggunakan struktur data List sebagai penyimpanan antrean dengan metode .append() untuk enqueue dan .pop(0) untuk dequeue (FIFO), dilengkapi validasi kapasitas maksimal 10 pelanggan serta menu interaktif berbasis while True untuk operasi antrean secara berkelanjutan.
 
 ## Source Code
 <img width="1057" height="597" alt="Cuplikan layar 2026-05-19 170920" src="https://github.com/user-attachments/assets/45b389fb-9f8b-4b6a-919a-482f37ebb363" />
