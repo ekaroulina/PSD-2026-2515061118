@@ -143,8 +143,6 @@ Program ini adalah implementasi **Queue Array** untuk simulasi sistem antrean pe
 <img width="675" height="504" alt="Cuplikan layar 2026-05-19 171818" src="https://github.com/user-attachments/assets/f8634272-ebdf-4b0e-8cc4-878c8297980c" />
 <img width="689" height="528" alt="Cuplikan layar 2026-05-19 171833" src="https://github.com/user-attachments/assets/87f85e96-89ea-4eb5-9243-d4c37c5602a0" />
 
-Berdasarkan output program di atas, pengujian dilakukan dengan beberapa skenario untuk memastikan seluruh fitur berjalan dengan benar.
-
 Pengujian pertama dilakukan dengan memilih menu 1 untuk menambah pelanggan. Pengguna memasukkan nama "eka" dan kode pelanggan "234", sehingga program membentuk tiket_id menjadi "EK34" dengan mengambil 2 huruf pertama nama (huruf kapital) dan 2 digit terakhir kode pelanggan. Program kemudian mencetak pesan "Pelanggan EK34 masuk antrean" yang menandakan proses enqueue berhasil dijalankan.
 
 Pengujian kedua kembali memilih menu 1 dengan nama "gita" dan kode pelanggan "902", sehingga tiket_id yang terbentuk adalah "GI02". Karena tiket_id tersebut mengandung angka "2", program mengenali pelanggan ini sebagai VIP dan langsung mencetak pesan "Pelanggan GI02 langsung mendapat kursi tanpa antre!" tanpa memasukkannya ke dalam antrean.
