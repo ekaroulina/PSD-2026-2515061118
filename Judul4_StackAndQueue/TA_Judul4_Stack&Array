@@ -1,0 +1,74 @@
+class QueueBioskop:
+    def __init__(self, kapasitas=10):
+        self.queue = []
+        self.kapasitas = kapasitas
+        self.total_pelanggan = 0
+
+    def enqueue(self, tiket_id):
+        if "2" in tiket_id:
+            print(f"Pelanggan {tiket_id} langsung mendapat kursi tanpa antre!")
+            self.total_pelanggan += 1
+        else:
+            if len(self.queue) >= self.kapasitas:
+                print(f"Kapasitas bioskop penuh! Harap tunggu sampai ada kursi kosong.")
+                return
+
+            self.queue.append(tiket_id)
+            print(f"Pelanggan {tiket_id} masuk antrean.")
+            self.total_pelanggan += 1
+
+    def dequeue(self):
+        if not self.is_empty():
+            pelanggan = self.queue.pop(0)
+            self.total_pelanggan -= 1
+            print(f"Pelanggan {pelanggan} dipanggil untuk membeli tiket.")
+        else:
+            print("Antrean kosong!")
+
+    def display(self):
+        print(f"Total pelanggan di bioskop: {self.total_pelanggan}/{self.kapasitas} (VIP tidak dihitung antrean)")
+        if self.is_empty():
+            print("Antrean kosong.")
+        else:
+            print("Antrean saat ini:", " -> ".join(self.queue))
+
+    def is_empty(self):
+        return len(self.queue) == 0
+
+def main():
+    bioskop = QueueBioskop(kapasitas=10)
+    while True:
+        print("\nMenu:")
+        print("1. Tambah pelanggan ke antrean")
+        print("2. Layani pelanggan")
+        print("3. Lihat pelanggan pertama")
+        print("4. Lihat pelanggan terakhir")
+        print("5. Cek apakah antrean kosong")
+        print("6. Lihat jumlah pelanggan dalam antrean")
+        print("7. Keluar")
+
+        pilihan = input("Pilih menu: ")
+
+        if pilihan == "1":
+            nama = input("Masukkan Nama Pelanggan: ")
+            kode = input("Masukkan kode Pelanggan: ")
+            tiket_id = f"{nama[:2].upper()}{kode[-2:]}"
+            bioskop.enqueue(tiket_id)
+        elif pilihan == "2":
+            bioskop.dequeue()
+        elif pilihan == "3":
+            print("Pelanggan pertama:", bioskop.queue[0] if not bioskop.is_empty() else "Kosong")
+        elif pilihan == "4":
+            print("Pelanggan terakhir:", bioskop.queue[-1] if not bioskop.is_empty() else "Kosong")
+        elif pilihan == "5":
+            print("Antrean kosong?", bioskop.is_empty())
+        elif pilihan == "6":
+            bioskop.display()
+        elif pilihan == "7":
+            print("Keluar dari program.")
+            break
+        else:
+            print("Pilihan tidak valid. Coba lagi.")
+
+if __name__ == "__main__":
+    main()
