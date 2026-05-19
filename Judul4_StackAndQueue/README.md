@@ -158,4 +158,4 @@ Pengujian keenam memilih menu 6 untuk melihat jumlah pelanggan. Program memanggi
 Terakhir, pengguna memilih menu 7 untuk keluar dari program, sehingga program mencetak "Keluar dari program" dan perulangan while dihentikan dengan perintah break.
 
 ## Link Youtube
-
+https://youtu.be/8Xd446qykxs?si=giLOQi68zDN12-HG
