@@ -218,5 +218,13 @@ Baris 122 : Memanggil fungsi main untuk memulai jalannya program
 ## Output
 <img width="783" height="570" alt="Cuplikan layar 2026-05-25 111153" src="https://github.com/user-attachments/assets/b26930c4-c998-49c3-9008-a09062bf9d65" />
 <img width="678" height="237" alt="Cuplikan layar 2026-05-25 111207" src="https://github.com/user-attachments/assets/4bbb872f-60ae-48fe-9620-85a3813cb2d1" />
+Berdasarkan output program di atas, pengguna pertama kali memilih menu 1 yaitu Tambah atau Ubah Kontak, kemudian memasukkan nama eka dengan nomor telepon 08989765. Program memanggil metode insert yang menelusuri pohon BST dan karena pohon masih kosong, simpul baru langsung dibuat sebagai akar, lalu menampilkan pesan "Kontak 'eka' berhasil disimpan".
 
+Selanjutnya pengguna kembali memilih menu 1 dan memasukkan nama eka lagi dengan nomor telepon baru 0987532245. Karena nama eka sudah ada dalam pohon, program tidak membuat simpul baru melainkan langsung memperbarui nomor telepon pada simpul yang sudah ada. Program menampilkan dua pesan sekaligus yaitu "Kontak dengan nama 'eka' sudah ada. Nomor telepon diperbarui" dan "Kontak 'eka' berhasil disimpan", yang membuktikan bahwa metode insert_node menangani duplikasi nama dengan cara memperbarui data bukan menambah simpul baru.
+
+Pengguna kemudian memilih menu 2 yaitu Cari Kontak dan memasukkan nama eka. Metode search_node menelusuri pohon mulai dari akar dan langsung menemukan kontak karena eka adalah satu-satunya simpul sekaligus akar pohon. Program menampilkan Nama: eka dan No. Telp: 987532245, dengan catatan angka 0 di depan tidak muncul karena nomor telepon disimpan sebagai tipe integer bukan string.
+
+Pengguna lalu memilih menu 3 yaitu Hapus Kontak dan memasukkan nama eka. Metode delete_node menemukan simpul eka yang merupakan simpul daun tanpa anak kiri maupun kanan, sehingga simpul langsung dihapus dengan mengembalikan nilai None dan pohon kembali kosong.
+
+Pada percobaan terakhir pengguna memilih menu 4 yaitu Tampilkan Semua Kontak, namun karena kontak eka sudah dihapus dan pohon kembali kosong, program menampilkan pesan "Phonebook masih kosong". Pengguna kemudian memilih menu 5 dan program menampilkan "Program selesai" lalu berhenti.
 ## Link Youtube
