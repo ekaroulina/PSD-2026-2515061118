@@ -1,5 +1,9 @@
 # Program Phonebook Menggunakan BST
 ## Deskripsi Singkat
+Program ini adalah implementasi struktur data **Binary Search Tree (BST)** dalam membangun sistem phonebook digital yang mampu menyimpan, mencari, memperbarui, dan menghapus kontak secara efisien. Pengguna berinteraksi melalui menu pilihan dan program akan memproses setiap operasi dengan cara menelusuri pohon secara rekursif berdasarkan urutan alfabet nama kontak.
+
+Program menerapkan struktur data **Tree** dengan dua kelas utama yaitu kelas Node sebagai cetak biru setiap simpul yang menyimpan nama, nomor telepon, serta pointer ke anak kiri dan anak kanan, dan kelas PhonebookBST sebagai pohon utama yang mengelola seluruh operasi. Setiap kontak yang ditambahkan akan ditempatkan ke posisi yang tepat dalam pohon, nama yang lebih kecil secara alfabet masuk ke kiri dan nama yang lebih besar masuk ke kanan, sehingga pohon selalu terurut secara alfabetis tanpa perlu proses pengurutan tambahan.
+Program juga menerapkan tiga metode utama BST yaitu insert untuk menambah atau memperbarui kontak, search untuk mencari kontak dengan menelusuri pohon dari akar hingga simpul yang cocok ditemukan, dan delete yang menangani tiga kasus penghapusan yaitu simpul daun tanpa anak, simpul dengan satu anak, serta simpul dengan dua anak menggunakan teknik in-order successor. Selain itu metode tampilkan_kontak menggunakan teknik In-Order Traversal yaitu menelusuri anak kiri terlebih dahulu lalu simpul saat ini kemudian anak kanan, sehingga seluruh kontak otomatis ditampilkan secara urut dari A sampai Z. Program juga dilengkapi Input Validation menggunakan blok try-except untuk memastikan pengguna selalu memasukkan input yang valid pada setiap operasi.
 
 ## Source Code
 <img width="933" height="525" alt="Cuplikan layar 2026-05-25 110915" src="https://github.com/user-attachments/assets/18a235b5-8b5b-4ed5-bd3d-5e31947c055a" />
