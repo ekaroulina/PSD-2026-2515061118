@@ -218,6 +218,7 @@ Baris 122 : Memanggil fungsi main untuk memulai jalannya program
 ## Output
 <img width="783" height="570" alt="Cuplikan layar 2026-05-25 111153" src="https://github.com/user-attachments/assets/b26930c4-c998-49c3-9008-a09062bf9d65" />
 <img width="678" height="237" alt="Cuplikan layar 2026-05-25 111207" src="https://github.com/user-attachments/assets/4bbb872f-60ae-48fe-9620-85a3813cb2d1" />
+
 Berdasarkan output program di atas, pengguna pertama kali memilih menu 1 yaitu Tambah atau Ubah Kontak, kemudian memasukkan nama eka dengan nomor telepon 08989765. Program memanggil metode insert yang menelusuri pohon BST dan karena pohon masih kosong, simpul baru langsung dibuat sebagai akar, lalu menampilkan pesan "Kontak 'eka' berhasil disimpan".
 
 Selanjutnya pengguna kembali memilih menu 1 dan memasukkan nama eka lagi dengan nomor telepon baru 0987532245. Karena nama eka sudah ada dalam pohon, program tidak membuat simpul baru melainkan langsung memperbarui nomor telepon pada simpul yang sudah ada. Program menampilkan dua pesan sekaligus yaitu "Kontak dengan nama 'eka' sudah ada. Nomor telepon diperbarui" dan "Kontak 'eka' berhasil disimpan", yang membuktikan bahwa metode insert_node menangani duplikasi nama dengan cara memperbarui data bukan menambah simpul baru.
