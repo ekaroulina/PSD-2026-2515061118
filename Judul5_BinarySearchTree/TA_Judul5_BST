@@ -1,0 +1,128 @@
+class Node:
+    def __init__(self, nama, nomor_telepon):
+        self.nama = nama
+        self.nomor_telepon = nomor_telepon
+        self.left = None
+        self.right = None
+
+
+class PhonebookBST:
+    def __init__(self):
+        self.root = None
+
+    def insert_node(self, root, nama, nomor_telepon):
+        if root is None:
+            return Node(nama, nomor_telepon)
+        if nama.lower() < root.nama.lower():
+            root.left = self.insert_node(root.left, nama, nomor_telepon)
+        elif nama.lower() > root.nama.lower():
+            root.right = self.insert_node(root.right, nama, nomor_telepon)
+        else:
+            root.nomor_telepon = nomor_telepon
+            print(f"Kontak dengan nama '{nama}' sudah ada. Nomor telepon diperbarui.")
+        return root
+
+    def insert(self, nama, nomor_telepon):
+        self.root = self.insert_node(self.root, nama, nomor_telepon)
+
+    def find_min_node(self, root):
+        current = root
+        while current is not None and current.left is not None:
+            current = current.left
+        return current
+
+    def delete_node(self, root, nama):
+        if root is None:
+            print(f"Kontak '{nama}' tidak ditemukan.")
+            return None
+        if nama.lower() < root.nama.lower():
+            root.left = self.delete_node(root.left, nama)
+        elif nama.lower() > root.nama.lower():
+            root.right = self.delete_node(root.right, nama)
+        else:
+            if root.left is None and root.right is None:
+                return None
+            elif root.left is None:
+                return root.right
+            elif root.right is None:
+                return root.left
+            else:
+                successor = self.find_min_node(root.right)
+                root.nama = successor.nama
+                root.nomor_telepon = successor.nomor_telepon
+                root.right = self.delete_node(root.right, successor.nama)
+            print(f"Kontak '{nama}' berhasil dihapus.")
+        return root
+
+    def delete(self, nama):
+        self.root = self.delete_node(self.root, nama)
+
+    def search_node(self, root, nama):
+        if root is None or root.nama.lower() == nama.lower():
+            return root
+        if nama.lower() < root.nama.lower():
+            return self.search_node(root.left, nama)
+        return self.search_node(root.right, nama)
+
+    def search(self, nama):
+        return self.search_node(self.root, nama)
+
+    def tampilkan_kontak(self, root):
+        if root is not None:
+            self.tampilkan_kontak(root.left)
+            print(f"- {root.nama}: {root.nomor_telepon}")
+            self.tampilkan_kontak(root.right)
+
+
+def main():
+    phonebook = PhonebookBST()
+    pilih = 0
+    while pilih != 5:
+        print("1. Tambah/Ubah Kontak")
+        print("2. Cari Kontak")
+        print("3. Hapus Kontak")
+        print("4. Tampilkan Semua Kontak (A-Z)")
+        print("5. Keluar")
+        
+        try:
+            pilih = int(input("Pilih menu: "))
+        except ValueError:
+            print("Input tidak valid! Masukkan angka 1-5.")
+            continue
+            
+        if pilih == 1:
+            try:
+                nama = input("Masukkan nama: ")
+                nomor = int(input("Masukkan nomor telepon: "))
+                if nama and nomor:
+                    phonebook.insert(nama, nomor)
+                    print(f"Kontak '{nama}' berhasil disimpan.")
+            except ValueError:
+                print("Input tidak valid!")
+                
+        elif pilih == 2:
+            nama = input("Cari nama kontak: ")
+            hasil = phonebook.search(nama)
+            if hasil:
+                print(f"\n[Kontak Ditemukan]\nNama: {hasil.nama}\nNo. Telp: {hasil.nomor_telepon}")
+            else:
+                print(f"Kontak dengan nama '{nama}' tidak ditemukan.")
+                
+        elif pilih == 3:
+            nama = input("Masukkan nama kontak yang akan dihapus: ")
+            phonebook.delete(nama)
+            
+        elif pilih == 4:
+            if phonebook.root is None:
+                print("(Phonebook masih kosong)")
+            else:
+                phonebook.tampilkan_kontak(phonebook.root)
+                
+        elif pilih == 5:
+            print("Program selesai.")
+        else:
+            print("Pilihan menu tidak tersedia!")
+
+
+if __name__ == "__main__":
+    main()
