@@ -1,4 +1,4 @@
-# Program Kamus Bahasa Batak ke Bahasa Indonesia Menggunakan Hash Map
+# Program Kamus Bahasa Batak Menggunakan Hash Map
 ## Deskripsi Singkat
 Program ini adalah implementasi HashMap Separate Chaining untuk simulasi kamus sederhana bahasa daerah. Pengguna dapat menambahkan pasangan kata dan arti, mencari arti suatu kata, menghapus kata dari kamus, serta menampilkan seluruh isi kamus berdasarkan indeks hash. Program menggunakan struktur data Linked List untuk menangani collision pada setiap bucket hash, di mana setiap node menyimpan key, value, dan pointer next. Fungsi hash dibuat dengan menjumlahkan nilai ASCII tiap karakter pada key menggunakan ord() lalu dimodulo dengan ukuran tabel. Program dilengkapi operasi utama seperti insert() untuk menambah data, search() untuk mencari kata, remove_key() untuk menghapus kata, serta display() untuk menampilkan isi tabel hash secara keseluruhan dengan bentuk rantai node (linked list).
 
