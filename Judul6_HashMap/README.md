@@ -565,4 +565,14 @@ Memanggil function `main()` untuk menjalankan program.
 ## Output
 <img width="613" height="393" alt="Cuplikan layar 2026-06-05 142615" src="https://github.com/user-attachments/assets/ecc88a63-f3e0-46c2-a0bf-99490f3e3988" />
 
+Berdasarkan output program di atas, program terlebih dahulu menampilkan seluruh isi kamus yang disimpan menggunakan struktur data HashMap dengan metode Separate Chaining. Data ditampilkan berdasarkan indeks hash dari 0 sampai 9. Setiap indeks dapat berisi lebih dari satu data karena adanya collision, yaitu kondisi ketika beberapa key memiliki nilai hash yang sama dan disimpan dalam bentuk linked list. Hal ini terlihat pada indeks 2 yang menyimpan data `(bisuk : bijak)` dan pada indeks 4 yang menyimpan `(muruk : marah)` serta `(au : aku)` dalam satu bucket yang sama. Selain itu terdapat juga data lain seperti `(jagal : daging)` pada indeks 1, `(aek : air)` pada indeks 5, `(mangan : makan)` pada indeks 6, dan `(madabu : jatuh)` pada indeks 8.
+
+Setelah seluruh isi kamus ditampilkan, program menjalankan fungsi `search("mangan")` untuk mencari arti kata `"mangan"`. Program terlebih dahulu menghitung nilai hash dari kata tersebut untuk menentukan indeks penyimpanannya, kemudian melakukan traversal pada linked list di bucket terkait hingga menemukan key yang sesuai. Karena data ditemukan pada indeks 6, program menampilkan output `Arti dari 'mangan' adalah 'makan'`.
+
+Selanjutnya program menjalankan fungsi `remove_key("bisuk")` untuk menghapus data dengan key `"bisuk"`. Program kembali menghitung hash key untuk menentukan bucket yang sesuai, kemudian melakukan traversal linked list hingga menemukan node dengan key tersebut. Setelah data ditemukan, node dihapus dari linked list sehingga bucket indeks 2 menjadi kosong dan hanya menampilkan `NULL`.
+
+Program kemudian kembali menampilkan isi kamus setelah proses penghapusan. Output menunjukkan bahwa data `(bisuk : bijak)` sudah tidak ada lagi, sedangkan data lainnya tetap tersimpan dengan benar pada bucket masing-masing.
+
+Terakhir, program menjalankan fungsi `search("langga")` untuk mencari kata `"langga"`. Setelah proses pencarian dilakukan pada bucket yang sesuai, program tidak menemukan key tersebut di dalam hash map sehingga menghasilkan output `Kata tidak ditemukan`. Hal ini menunjukkan bahwa fungsi pencarian dapat membedakan data yang tersedia dan data yang tidak ada di dalam struktur HashMap.
+
 ## Link Yt
